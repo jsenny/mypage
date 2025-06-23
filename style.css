@@ -1,25 +1,40 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 1rem;
+  padding: 0;
   background-color: #f4f4f4;
   color: #333;
 }
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #f4f4f4;
+  z-index: 10;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 h1 {
   text-align: center;
+  margin: 0;
 }
+
 #timer {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
 }
+
 .match-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 1rem auto;
+  padding: 0 1rem;
 }
+
 .match {
   background-color: white;
   padding: 1rem;
@@ -29,10 +44,12 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
+
 .match.done {
   background-color: #d4edda;
   text-decoration: line-through;
 }
+
 button {
   padding: 0.5rem 1rem;
   border: none;
@@ -41,9 +58,11 @@ button {
   color: white;
   cursor: pointer;
 }
+
 button:hover {
   background-color: #0056b3;
 }
+
 @media (max-width: 600px) {
   .match {
     flex-direction: column;
