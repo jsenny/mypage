@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  color: #333;
+}
+h1 {
+  text-align: center;
+}
+#timer {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.match {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.match.done {
+  background-color: #d4edda;
+  text-decoration: line-through;
+}
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 600px) {
+  .match {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  button {
+    margin-top: 0.5rem;
+  }
+}
