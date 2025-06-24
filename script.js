@@ -13,18 +13,12 @@ matches.forEach((pair, index) => {
   const item = document.createElement('div');
   item.className = 'match';
   item.id = `match-${index}`;
+  item.innerHTML = `${index + 1}. ${pair[0]} vs ${pair[1]}`;
 
-  const label = document.createElement('span');
-  label.textContent = `${index + 1}. ${pair[0]} vs ${pair[1]}`;
-
-  const btn = document.createElement('button');
-  btn.textContent = 'Oznacz jako rozegrany';
-  btn.onclick = () => {
+  item.onclick = () => {
     item.classList.toggle('done');
   };
 
-  item.appendChild(label);
-  item.appendChild(btn);
   listContainer.appendChild(item);
 });
 
